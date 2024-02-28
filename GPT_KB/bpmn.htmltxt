@@ -1,0 +1,37 @@
+#TUTORIAL
+
+USER: To Insert activity [bpmn]:use the following mutator operator:     s = select one Sequence where {^to not typed EndEv}
+    f = select one FlowObject in s->^to
+    a = create Activity with {name = 'newActivity'}
+    modify target ^to from s to a
+    create Sequence with {name = 'newSeq', ^from = a, ^to = f}
+
+USER: To Remove activity [bpmn]:use the following mutator operator:     s0 = select one Sequence where {^to is typed Activity}
+    a = select one Activity in s0->^to
+    s1 = select one Sequence where {^from = a}
+    f = select one FlowObject in s1->^to
+    remove a, s1
+    modify target ^to from s0 to f
+
+USER: To Move activity [bpmn]:use the following mutator operator:     a = select one Activity
+    s0 = select one Sequence where {^to = a and ^from <> null}
+    s1 = select one Sequence where {^from = a and ^to <> null}
+    o = select one FlowObject where {self = s1->^to}
+    s2 = select one Sequence where {^from = o and ^to <> null}
+    modify s0 with {^to = o},
+           s1 with {^from = o, ^to = a},
+           s2 with {^from = a}
+
+USER: To Replace activity [bpmn]:use the following mutator operator:     a0 = select one Activity
+    src0 = select one Sequence where {^to = a0}
+    tar0 = select one Sequence where {^from = a0}
+    a1 = select one Activity where {self <> a0}
+    src1 = select one Sequence where {^to = a1}
+    tar1 = select one Sequence where {^from = a1}
+    modify src0 with {^to = a1}, tar0 with {^from = a1},
+           src1 with {^to = a0}, tar1 with {^from = a0}
+
+USER: To Retype activity [bpmn]:use the following mutator operator:     retype one [AND, OR, XOR] as [AND, OR, XOR]
+
+
+
