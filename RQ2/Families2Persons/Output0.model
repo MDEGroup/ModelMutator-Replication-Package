@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Families="Families" xsi:schemaLocation="Families ../../../model/FamiliesClaudio.ecore">
+  <Families:Family lastName="March">
+    <father firstName="Jim"/>
+    <mother firstName="YYkKizhaOAm"/>
+    <sons firstName="Brandon"/>
+    <daughters firstName="Brenda"/>
+    <daughters firstName="TOIzNxdfHe"/>
+    <daughters firstName="SqLEfIFCxiHl"/>
+    <daughters firstName="IwHZHRqSBMiXf"/>
+  </Families:Family>
+  <Families:Family lastName="Sailor">
+    <mother firstName="Jackie"/>
+    <sons firstName="David"/>
+  </Families:Family>
+  <Families:Family lastName="VXUhZgYY"/>
+  <Families:Family lastName="gvQtUhRrIVLCz">
+    <father firstName="mdKHFktLT"/>
+    <sons firstName="lwxEOdzrEVC"/>
+  </Families:Family>
+  <Families:Family lastName="MSuOgKEVuWfkh"/>
+  <Families:Family lastName="RWyAvVvRd">
+    <daughters firstName="bYSgdOton"/>
+  </Families:Family>
+  <Families:Family lastName="LpzfZGxq">
+    <daughters firstName="Kelly"/>
+  </Families:Family>
+  <Families:Family lastName="TeJoKEkuAWki"/>
+  <Families:Family lastName="kFowdVuLtwkw">
+    <father firstName="xVfydYnf"/>
+    <daughters firstName="iWEgTehA"/>
+  </Families:Family>
+  <Families:Family lastName="qEFckjqYyrL"/>
+  <Families:Family lastName="zqondkVqKIs">
+    <father firstName="JoxLDflH"/>
+  </Families:Family>
+  <Families:Family lastName="zJtrFOthPki">
+    <father firstName="Peter"/>
+    <daughters firstName="icCuJFgUeX"/>
+  </Families:Family>
+  <Families:Family lastName="vPTokjzBYsey">
+    <daughters firstName="CRbfBspOakSB"/>
+  </Families:Family>
+  <Families:Family lastName="PjMxguoALKU"/>
+  <Families:Family lastName="gfyWncoYge">
+    <sons firstName="rqfOYRlHG"/>
+    <sons firstName="AhmchSSM"/>
+  </Families:Family>
+  <Families:Family lastName="PIoeUmyvujlOg">
+    <mother firstName="dOpCqInUpt"/>
+  </Families:Family>
+  <Families:Family lastName="BvJFFdFNOZNbs">
+    <father firstName="JnropqggoRH"/>
+    <mother firstName="ZKaCnXbYQS"/>
+    <sons firstName="Dylan"/>
+  </Families:Family>
+  <Families:Family lastName="GENERATED_LASTNAME">
+    <sons firstName="vVPIEYyCMWd"/>
+  </Families:Family>
+  <Families:Family lastName="GENERATED_LASTNAME"/>
+  <Families:Family lastName="GENERATED_LASTNAME"/>
+  <Families:Family lastName="GENERATED_LASTNAME">
+    <daughters firstName="VGPcXiJp"/>
+  </Families:Family>
+  <Families:Family lastName="GENERATED_LASTNAME">
+    <mother firstName="BmgdKklqUtHFE"/>
+  </Families:Family>
+</xmi:XMI>
