@@ -1,0 +1,33 @@
+generate 2 mutants
+in "data/out/"
+from "data/model/"
+metamodel "/ASPLEExample/data/model/Asple.ecore"
+
+with blocks {
+	rao {
+		modify one BinaryOperator where {operator in ['add', 'subtract', 'multiply', 'divide', 'module']}
+			with {operator in ['add', 'subtract', 'multiply', 'divide', 'module']}
+		modify all BinaryOperator with {operator = 'qwerty1234'}
+	}
+	rro {
+		modify one BinaryOperator where {operator in ['less', 'equals', 'greater', 'distinct']}
+			with {operator in ['less', 'equals', 'greater', 'distinct']}
+			modify all BinaryOperator with {operator = 'asdfg56789'}
+	}
+	rli {
+		loop = select one Loop
+			create Boolean in loop->expression with {value = true}
+	}
+	rst {
+		remove one Statement
+		modify one Identifier with {name = 'artificial value'}
+	}
+	rsv {
+		modify one Integer with {value = 1234}
+	}
+	ia1 {
+		op = select one BinaryOperator where {operator in ['add', 'subtract', 'multiply', 'divide', 'module']}
+		exp = create BinaryOperator in op->right with {left = op->right, operator = 'add'}
+		create Integer in exp->right with {value = 1123581321}[2..2]
+	}
+}

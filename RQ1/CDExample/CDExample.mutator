@@ -1,0 +1,235 @@
+generate 2 mutants
+in "data/out/"
+from "data/model/"
+metamodel "/CDExample/data/model/UMLClassDiagram.ecore"
+
+with blocks {
+	uco1 {
+		deep clone one Constraint
+		create Class with{name='control-class-uco1'}[1..5]
+	}
+	uco2 {
+		create Constraint with {type = one Class, id = random-string(1, 4)}
+		create Class with{name='control-class-uco2'}[1..5]
+	}
+	uas1 {
+		clone one Association
+		create Class with{name='control-class-uas1'}[1..5]
+	}
+	uas2 {
+		a1 = select one Association
+		a2 = select one Association where {src = a1->tar}
+		a3 = create Association with {
+			name = random-string(1, 4),
+			src = a1->src, tar = a2->tar,
+			copy(nsrc, a1.nsrc), copy(ntar, a2.ntar),
+			derived = true
+		}
+		create Class with{name='control-class-uas2'}[1..5]
+	}
+	uas3 {
+		create Association with {src = one Class, tar = one Class, name = random-string(1, 4)}
+		create Class with{name='control-class-uas3'}[1..5]
+	}
+	uas4 {
+		create Association with {src = one Class, tar = one Class, name = random-string(1, 4), derived = true}
+		create Class with{name='control-class-uco4'}[1..5]
+	}
+	uge1 {
+		cl = select one Class where {super <> null and super->super <> null}
+		sup1 = select one Class in cl->super where {super <> null}
+		sup2 = select one Class in sup1->super where {self <> cl->super}
+		modify cl with {super = sup2}
+		create Class with{name='control-class-uge1'}[1..5]
+	}
+	uge2 {
+		cl1 = select one Class where {super <> null}
+		sup = select all Class in closure(cl1->super)
+		cl2 = select one Class where {self <> sup}
+		modify cl1 with {super = cl2}
+		create Class with{name='control-class-uge2'}[1..5]
+	}
+	ucl1 {
+		deep clone one Class
+		create Class with{name='control-class-ucl1'}[1..5]
+	}
+	ucl2 {
+		create Class with {name = random-string(1, 4)}
+		create Class with{name='control-class-ucl2'}[1..5]
+	}
+	ucl3 {
+		clone one AssociationClass
+		create Class with{name='control-class-ucl3'}[1..5]
+	}
+	ucl4 {
+		create AssociationClass with {name = random-string(1, 4)}
+		create Class with{name='control-class-ucl4'}[1..5]
+	}
+	uat1 {
+		clone one Attribute
+		create Class with{name='control-class-uat1'}[1..5]
+	}
+	uat2 {
+		create Attribute with {type = one Class, name = random-string(1, 4)}
+		create Class with{name='control-class-uat2'}[1..5]
+	}
+	uop1 {
+		deep clone one Operation
+		create Class with{name='control-class-uop1'}[1..5]
+	}
+	uop2 {
+		create Operation with {type = one Class, name = random-string(1, 4)}
+		create Class with{name='control-class-uop2'}[1..5]
+	}
+	upa1 {
+		clone one Parameter
+		create Class with{name='control-class-upa1'}[1..5]
+	}
+	upa2 {
+		create Parameter with {name = random-string(1, 4)}
+		create Class with{name='control-class-upa2'}[1..5]
+	}
+	wco1 {
+		remove one PathElementCS where {pathName = one Attribute}
+		create Class with{name='control-class-wco1'}[1..5]
+	}
+	wco2 {
+		path = select one PathElementCS where {pathName = one Attribute}
+		att = select one Attribute in path->pathName
+		modify att with {type = other Class}
+		create Class with{name='control-class-wco2'}[1..5]
+	}
+	wco3 {
+		remove one OperationCS
+		create Class with{name='control-class-wco3'}[1..5]
+	}
+	wco4 {
+		modify one IntLiteralExpCS with {op in ['add', 'subtract', 'multiply', 'divide']}
+		create Class with{name='control-class-wco4'}[1..5]
+	}
+	wco5 {
+		inv = select one InvariantCS where {exp <> null}
+		create LogicExpCS in inv->exp with {op = 'not'}
+		create Class with{name='control-class-wco5'}[1..5]
+	}
+	wco6a {
+		modify one BooleanExpCS where {op = 'and'} with {op = 'or'}
+		create Class with{name='control-class-wco6a'}[1..5]
+	}
+	wco6b {
+		modify one BooleanExpCS where {op = 'or'} with {op = 'and'}
+		create Class with{name='control-class-wco6b'}[1..5]
+	}
+	wco7 {
+		remove one LogicExpCS where {op = 'not'}
+		create Class with{name='control-class-wco7'}[1..5]
+	}
+	wco8 {
+		modify one BooleanExpCS where {op in ['lt', 'lte', 'gt', 'gte', 'equals', 'distinct']}
+			with {op in ['lt', 'lte', 'gt', 'gte', 'equals', 'distinct']}
+			create Class with{name='control-class-wco8'}[1..5]
+	}
+	wco9 {
+		modify one IntLiteralExpCS where {op = 'negative'} with {op = ''}
+		create Class with{name='control-class-wco9'}[1..5]
+	}
+	was1 {
+		modify one Association with {swapref(src, tar)}
+		create Class with{name='control-class-was1'}[1..5]
+	}
+	was2 {
+		retype one [Aggregation, Association, Composition, Dependency] as [Aggregation, Association, Composition, Dependency]
+		create Class with{name='control-class-was2'}[1..5]
+	}
+	was3 {
+		modify one Association with {ntar in ['*', '0..1', '1..1', '1..*']}
+		create Class with{name='control-class-was3'}[1..5]
+	}
+	wge {
+		modify one Class with {super = other Class}
+		create Class with{name='control-class-wge'}[1..5]
+	}
+	wcl1 {
+		modify one Class with {visibility in {public, private, protected, package}}
+		create Class with{name='control-class-wcl1'}[1..5]
+	}
+	//wcl2 {
+	//	retype one Class as AssociationClass with {association = one Association}
+	//}
+	wcl3 {
+		retype one AssociationClass as Class
+		create Class with{name='control-class-wcl3'}[1..5]
+	}
+	wcl4 {
+		modify one Class where {abstract = false} with {abstract = true}
+		create Class with{name='control-class-wcl4'}[1..5]
+	}
+	wat1 {
+		modify one Attribute where {derived = false} with {derived = true}
+		create Class with{name='control-class-wat1'}[1..5]
+	}
+	wat2 {
+		modify one Attribute where {derived = true} with {derived = false}
+		create Class with{name='control-class-wat2'}[1..5]
+	}
+	wat3 {
+		modify one Attribute with {type = other NamedElement}
+		create Class with{name='control-class-wat3'}[1..5]
+	}
+	wat4 {
+		modify one Attribute with {visibility in {public, private, protected, package}}
+		create Class with{name='control-class-wat4'}[1..5]
+	}
+	wop1 {
+		oper = select one Operation where {params <> null}
+		p = select one Parameter in oper->params
+		modify oper with {params -= p, params += p}
+		create Class with{name='control-class-wop1'}[1..5]
+	}
+	wop2 {
+		modify one Operation with {visibility in {public, private, protected, package}}
+		create Class with{name='control-class-wop2'}[1..5]
+	}
+	wop3 {
+		modify one Operation with {type = other NamedElement}
+		create Class with{name='control-class-wop3'}[1..5]
+	}
+	wpa {
+		modify one Parameter with {type = other NamedElement}
+		create Class with{name='control-class-wpa'}[1..5]
+	}
+	mco {
+		remove one Constraint
+		create Class with{name='control-class-mco'}[1..5]
+	}
+	mas {
+		remove one Association
+		create Class with{name='control-class-mas'}[1..5]
+	}
+	mge {
+		cl = select one Class where {super <> null}
+		remove one Class from cl->super
+		create Class with{name='control-class-mge'}[1..5]
+	}
+	mcl {
+		cl = select one Class
+		remove all Relation where {src = cl or tar = cl}
+		remove all Operation where {type = cl}
+		remove all Feature where {type = cl}
+		remove all AssociationClass where {association = null}
+		remove cl
+		create Class with{name='control-class-mcl'}[1..5]
+	}
+	mat {
+		remove one Attribute
+		create Class with{name='control-class-mat'}[1..5]
+	}
+	mop {
+		remove one Operation
+		create Class with{name='control-class-mop'}[1..5]
+	}
+	mpa {
+		remove one Parameter
+		create Class with{name='control-class-mpa'}[1..5]
+	}
+}
