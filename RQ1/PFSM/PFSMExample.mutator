@@ -1,0 +1,27 @@
+generate 2 mutants
+in "data/out/"
+from "data/model/"
+metamodel "/PFSMExample/data/model/PFSM.ecore"
+
+with blocks {
+	cis {
+		s0 = modify one State where {isInitial = true} with {isInitial = false}
+		s1 = modify one State where {self <> s0} with {isInitial = true}
+	}
+	alp {
+		t0 = select one Transition where {probability = min(probability)}
+		t1 = select one Transition where {self <> t0 and src = t0->src}
+		modify t1 with {probability += random(0.0, t0.probability)}
+		t2 = select one Transition where {self <> t0 and self <> t1 and src = t0->src}
+		modify t2 with {probability -= t1.probability}
+	}
+	cts {
+		modify target tar from one Transition to other State
+	}
+	cnt {
+		t0 = select one Transition where {probability = min(probability)}
+		t1 = select one Transition where {self <> t0 and src = t0->src}
+		t2 = create Transition with {probability = random(0.0, t0.probability), src = t0->src}
+		modify t1 with {probability -= t2.probability}
+	}
+}
