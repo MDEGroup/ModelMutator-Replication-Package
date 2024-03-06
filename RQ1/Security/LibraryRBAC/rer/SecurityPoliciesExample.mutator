@@ -1,0 +1,10 @@
+generate 2 mutants
+in "data/out/"
+from "data/model/"
+metamodel "/SecurityPoliciesExample/data/model/SecurityPolicy.ecore"
+
+with commands {
+		remove one Rule
+		create PolicyType with {name="class-control-rer"}[1..5]
+
+}
