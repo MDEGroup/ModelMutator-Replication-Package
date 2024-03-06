@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mysql:DataBase xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mysql="http://mysql" xmi:version="2.0" xmi:id="_uXkccFiJEe6Vh9XGMD-IQw" name="dbtest">
+  <tables name="cities">
+    <columns xsi:type="mysql:IntegerColumn" name="city_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+  </tables>
+<tables name="fqeox"><columns xsi:type="mysql:IntegerColumn" name="yydqf" type="int" isPrimaryKey="False" defaultValue="" comment="mvfgggacuaxmwiyletee" isAutoIncrement="True"/><columns xsi:type="mysql:IntegerColumn" name="mtomo" type="int" isPrimaryKey="False" defaultValue="" comment="qgyeolojmadtjdwcnsdw" isAutoIncrement="False"/></tables></mysql:DataBase>

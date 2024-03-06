@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="IEEE1471" nsURI="http://ieee1471" nsPrefix="ieee1471">
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" ordered="false"
+        unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IEEE1471Model" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="system" ordered="false"
+        lowerBound="1" eType="#//System" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" ordered="false"
+        lowerBound="1" eType="#//Environment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="missions" ordered="false"
+        upperBound="-1" eType="#//Mission" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="architecture" ordered="false"
+        lowerBound="1" eType="#//Architecture" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stakeholders" ordered="false"
+        upperBound="-1" eType="#//Stakeholder" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concerns" ordered="false"
+        upperBound="-1" eType="#//Concern" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewpoints" ordered="false"
+        upperBound="-1" eType="#//Viewpoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="libraryViewpoints" ordered="false"
+        upperBound="-1" eType="#//LibraryViewpoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="architecturalDescription"
+        ordered="false" lowerBound="1" eType="#//ArchitecturalDescription" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rationale" ordered="false"
+        lowerBound="1" eType="#//Rationale" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="System" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fulfills" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Mission"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inhabits" ordered="false"
+        lowerBound="1" eType="#//Environment" eOpposite="#//Environment/influences"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasAn" ordered="false"
+        lowerBound="1" eType="#//Architecture"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has" ordered="false" lowerBound="1"
+        upperBound="-1" eType="#//Stakeholder"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mission" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Environment" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="influences" ordered="false"
+        lowerBound="1" eType="#//System" eOpposite="#//System/inhabits"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Architecture" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="describedBy" ordered="false"
+        lowerBound="1" eType="#//ArchitecturalDescription"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rationale" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="provides" ordered="false"
+        lowerBound="1" eType="#//ArchitecturalDescription"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArchitecturalDescription" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identifiesS" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Stakeholder"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identifiesC" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Concern"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selects" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Viewpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="organizedBy" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//View" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aggregates" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Model" containment="true" eOpposite="#//Model/participatesInAD"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="View" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conformsTo" ordered="false"
+        lowerBound="1" eType="#//Viewpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consitsOf" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Model" eOpposite="#//Model/participatesInV"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Model" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participatesInV" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//View" eOpposite="#//View/consitsOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participatesInAD" ordered="false"
+        lowerBound="1" eType="#//ArchitecturalDescription" eOpposite="#//ArchitecturalDescription/aggregates"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stakeholder" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has" ordered="false" lowerBound="1"
+        upperBound="-1" eType="#//Concern" eOpposite="#//Concern/isImportantTo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Concern" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isImportantTo" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Stakeholder" eOpposite="#//Stakeholder/has"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Viewpoint" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasSource" ordered="false"
+        eType="#//LibraryViewpoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedToCover" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Concern"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="establishesMethodsFor"
+        ordered="false" lowerBound="1" upperBound="-1" eType="#//Model"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LibraryViewpoint" eSuperTypes="#//Element"/>
+</ecore:EPackage>

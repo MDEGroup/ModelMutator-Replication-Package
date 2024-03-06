@@ -1,0 +1,117 @@
+Given this #ECORE metamodel <START ECORE> <?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="asple" nsURI="http://asple/1.0" nsPrefix="asple">
+  <eClassifiers xsi:type="ecore:EClass" name="Program">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declarations" upperBound="-1"
+        eType="#//Declaration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Declaration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ref" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" lowerBound="1" eType="#//Mode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identifiers" lowerBound="1"
+        upperBound="-1" eType="#//Identifier" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Primary" abstract="true" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Literal" abstract="true" eSuperTypes="#//Primary"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Identifier" eSuperTypes="#//Primary">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Boolean" eSuperTypes="#//Literal">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Integer" eSuperTypes="#//Literal">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Double" eSuperTypes="#//Literal">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BinaryOperator" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" lowerBound="1" eType="#//Primary"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assignment" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="var" lowerBound="1" eType="#//Identifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conditional" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="if" upperBound="-1" eType="#//Statement"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="else" upperBound="-1" eType="#//Statement"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Transput" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="var" lowerBound="1" eType="#//Identifier"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Mode">
+    <eLiterals name="int"/>
+    <eLiterals name="bool" value="1"/>
+    <eLiterals name="string" value="2"/>
+    <eLiterals name="double" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>
+ <EOF ECORE> and this #SEED model  <START SEED> <?xml version="1.0" encoding="ASCII"?>
+<asple:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:asple="http://asple/1.0" xmi:id="_7FuW4I-lEeaNMqhIMuT_iA">
+  <declarations xmi:id="_8BJdUI-lEeaNMqhIMuT_iA">
+    <identifiers xmi:id="_9EM1wI-lEeaNMqhIMuT_iA" name="total"/>
+    <identifiers xmi:id="__HNPUI-lEeaNMqhIMuT_iA" name="n"/>
+    <identifiers xmi:id="_BahVwI-mEeaNMqhIMuT_iA" name="inc"/>
+  </declarations>
+  <declarations xmi:id="_ixm2QI-mEeaNMqhIMuT_iA">
+    <identifiers xmi:id="_jKjhwI-mEeaNMqhIMuT_iA" name="d"/>
+  </declarations>
+  <statements xsi:type="asple:Assignment" xmi:id="_Dm_0YI-mEeaNMqhIMuT_iA" var="_9EM1wI-lEeaNMqhIMuT_iA">
+    <value xsi:type="asple:Integer" xmi:id="_E2uW4I-mEeaNMqhIMuT_iA" value="10"/>
+  </statements>
+  <statements xsi:type="asple:Assignment" xmi:id="_FwZw4I-mEeaNMqhIMuT_iA" var="__HNPUI-lEeaNMqhIMuT_iA">
+    <value xsi:type="asple:Integer" xmi:id="_pPp3wI-mEeaNMqhIMuT_iA"/>
+  </statements>
+  <statements xsi:type="asple:Assignment" xmi:id="_Ib2DcI-mEeaNMqhIMuT_iA" var="_BahVwI-mEeaNMqhIMuT_iA">
+    <value xsi:type="asple:Integer" xmi:id="_JhakYI-mEeaNMqhIMuT_iA" value="1"/>
+  </statements>
+  <statements xsi:type="asple:Assignment" xmi:id="_kSy8MI-mEeaNMqhIMuT_iA" var="_jKjhwI-mEeaNMqhIMuT_iA">
+    <value xsi:type="asple:Double" xmi:id="_mwz2wI-mEeaNMqhIMuT_iA" value="10.0"/>
+  </statements>
+  <statements xsi:type="asple:Loop" xmi:id="_Kbe_8I-mEeaNMqhIMuT_iA">
+    <expression xsi:type="asple:BinaryOperator" xmi:id="_LJbEAI-mEeaNMqhIMuT_iA" operator="less">
+      <left xsi:type="asple:Identifier" xmi:id="_MQSlcI-mEeaNMqhIMuT_iA" name="n"/>
+      <right xsi:type="asple:Identifier" xmi:id="_NT5XgI-mEeaNMqhIMuT_iA" name="total"/>
+    </expression>
+    <statements xsi:type="asple:Assignment" xmi:id="_OLg8AI-mEeaNMqhIMuT_iA" var="__HNPUI-lEeaNMqhIMuT_iA">
+      <value xsi:type="asple:BinaryOperator" xmi:id="_Unp5AI-mEeaNMqhIMuT_iA" operator="add">
+        <left xsi:type="asple:Identifier" xmi:id="_VPbDoI-mEeaNMqhIMuT_iA" name="n"/>
+        <right xsi:type="asple:Identifier" xmi:id="_XWOYEI-mEeaNMqhIMuT_iA" name="inc"/>
+      </value>
+    </statements>
+  </statements>
+</asple:Program>
+ <EOF SEED>, generate model mutants according to these #RULES <START RULES> generate 2 mutants
+in "data/out/"
+from "data/model/"
+metamodel "/ASPLEExample/data/model/Asple.ecore"
+
+with commands {
+
+		remove one Statement
+		modify one Identifier with {name = 'artificial value'}
+
+} <EOF RULES> export the generated mutants in a zip file.

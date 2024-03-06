@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Families">
+  <!-- Mutant 2: Generated based on another aspect of the mutation logic -->
+  <Family lastName="GeneratedLastName2">
+    <father firstName="GeneratedFather2"/>
+    <mother firstName="GeneratedMother2"/>
+    <sons firstName="GeneratedSon2"/>
+    <daughters firstName="GeneratedDaughter2"/>
+  </Family>
+</xmi:XMI>

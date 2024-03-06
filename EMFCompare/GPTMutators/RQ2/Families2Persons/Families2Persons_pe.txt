@@ -1,0 +1,121 @@
+Given this #ECORE metamodel  <?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="Families" nsURI="Families" nsPrefix="Families">
+    <eClassifiers xsi:type="ecore:EClass" name="Family">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" ordered="false"
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="father" ordered="false"
+          lowerBound="1" eType="#/0/Member" containment="true" eOpposite="#/0/Member/familyFather"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mother" ordered="false"
+          lowerBound="1" eType="#/0/Member" containment="true" eOpposite="#/0/Member/familyMother"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sons" ordered="false"
+          upperBound="-1" eType="#/0/Member" containment="true" eOpposite="#/0/Member/familySon"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="daughters" ordered="false"
+          upperBound="-1" eType="#/0/Member" containment="true" eOpposite="#/0/Member/familyDaughter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Member">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" ordered="false"
+          unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="familyFather" ordered="false"
+          eType="#/0/Family" eOpposite="#/0/Family/father"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="familyMother" ordered="false"
+          eType="#/0/Family" eOpposite="#/0/Family/mother"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="familySon" ordered="false"
+          eType="#/0/Family" eOpposite="#/0/Family/sons"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="familyDaughter" ordered="false"
+          eType="#/0/Family" eOpposite="#/0/Family/daughters"/>
+    </eClassifiers>
+  </ecore:EPackage>
+</xmi:XMI>
+ and this #SEED model <?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Families">
+  <Family lastName="March">
+    <father firstName="Jim"/>
+    <mother firstName="Cindy"/>
+    <sons firstName="Brandon"/>
+    <daughters firstName="Brenda"/>
+  </Family>
+  <Family lastName="Sailor">
+    <father firstName="Peter"/>
+    <mother firstName="Jackie"/>
+    <sons firstName="David"/>
+    <sons firstName="Dylan"/>
+    <daughters firstName="Kelly"/>
+  </Family>
+</xmi:XMI>
+, generate model mutants according to these #RULES generate 1 mutants
+in "data/out/"
+from "data/model/"
+metamodel "Families2Persons/data/model/FamiliesClaudio.ecore"
+// [5..5] -- [20..20] -- [100..100]
+//https://github.com/gomezabajo/Wodel/wiki/1.1.-Wodel-program-creation-tutorial
+
+with blocks {
+//member = create Member with { firstName = random-string (3,5)} [1]
+/*miaregola{
+		gen_mother = select one Member where {familyMother<> null}
+		gen_son = select one Member where {familySon<>null}	
+		
+		mother_and_son_family = create Family with{
+		lastName = "Rubei",
+		mother = gen_mother,
+		sons = gen_son
+	}
+		create Family with {	 	
+	 	 lastName = "Ladytron" 	 	 
+	 }
+}*/
+createMember {		
+	gen_father = select one Member where {familyFather<> null}
+	gen_daugther = select one Member where {familyDaughter<> null}	
+	gen_mother = select one Member where {familyMother<> null}
+	gen_son = select one Member where {familySon<>null}	
+	
+	
+	gen_family_with_father = select one Family where {father = gen_father} 
+	gen_family_with_daughter = select one Family where {father = gen_daugther} 
+	
+	/*remove one Member where { familyFather<> null  }	
+	remove one Member where { familyMother<> null }		
+	remove one Member where { familyDaughter<> null }	
+	remove one Member where {familySon<> null}*/
+	
+	no_parents_family = create Family with{
+		lastName = random-string(8,14),		
+		daughters = gen_daugther,
+		sons = gen_son
+	}[5..5]//[5..5][20..20][100..100]
+	
+	only_parents_family = create Family with{
+		lastName = random-string(8,14),
+		father = gen_father,
+		mother = gen_mother
+	}[5..5]//[5..5][20..20][100..100]
+	
+	mother_and_son_family = create Family with{
+		lastName = random-string(8,14),
+		mother = gen_mother,
+		sons = gen_son
+	}[5..5]//[5..5][20..20][100..100]
+	
+	
+	create Family with {	 	
+	 	 lastName = "GENERATED_LASTNAME" 	 	 
+	 }[5..5]//[5..5][20..20][100..100]
+	 
+	 //create Member with { familyFather = gen_family_with_father, firstName=random-string(3,5)}
+	 
+	 
+	 create Member with { firstName = random-string (8,14)} [5..5]//[5..5][20..20][100..100]
+	 
+	 create Member with {firstName = random-string(8,14),familyDaughter = gen_daugther}[5..5]//[5..5][20..20][100..100]
+	 create Member with {firstName = random-string(8,14),familyMother= gen_mother}[5..5]//[5..5][20..20][100..100]
+	 create Member with {firstName = random-string(8,14),familySon = gen_son}[5..5]//[5..5][20..20][100..100]	 
+	
+/*	f = select one Family where { father<> null and mother<> null}		
+	
+	modify f  with {daughters= gen_daugther}	 */
+	}
+
+} export the generated mutants in a zip file.

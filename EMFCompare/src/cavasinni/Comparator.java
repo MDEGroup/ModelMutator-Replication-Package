@@ -21,13 +21,65 @@ import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.uml2.uml.UMLPackage;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.regex.Pattern;
+import java.util.stream.Stream;
+
 public class Comparator {
 
-	public static void main (String[] args) {
-		//QUI HO USATO 2 VOLTE LO STESSO MODELLO PERCHE QUELLO GENERATO DA CHATGPT NON è UN MODELLO VALIDO
-		System.out.println(calculateSimilarity2("GPTMutators/ASPLE/Asple.ecore", "GPTMutators/ASPLE/mutant1.xml", "GPTMutators/ASPLE/mutant2.xml"));
-		//VA DA SE CHE DEVI RENDERLO VALIDO PRIMA DI ESEGUIRE LA COMPARAZIONE
-	}
+	/*public static void main (String[] args) {
+		
+		String ecoreMM = "GPTMutators/RQ2/Families2Persons/Families.ecore";
+		String mutatedOriginal = "GPTMutators/RQ2/Families2Persons/Output0.model";
+		
+		String gptMutated =  "GPTMutators/RQ2/Families2Persons/families_mutants_run_10/corrected_mutant_1.xml";
+		
+		System.out.println(calculateSimilarity2(ecoreMM, mutatedOriginal, gptMutated));
+		
+	}*/
+	
+	
+	
+	   public static void main(String[] args) {
+	        String basePath = "GPTMutators/RQ2/MySQL2KM3/";
+	        String ecoreMM = basePath + "MySQL.ecore";
+	        String mutatedOriginal = basePath + "Output0.model";
+	        
+	        try {
+	            Files.walk(Paths.get(basePath))
+	                    .filter(Files::isDirectory)
+	                    .forEach(folder -> {
+	                        String folderName = folder.getFileName().toString();
+	                        if (Pattern.matches("sql_mutants_run_\\d+", folderName)) {
+	                            try (Stream<Path> files = Files.walk(folder)) {
+	                                files.filter(file -> file.toString().endsWith(".xml"))
+	                                        .forEach(file -> {
+	                                            try {
+	                                                String gptMutated = file.toString();
+	                                                System.out.println("Comparing: " + mutatedOriginal + " with " + gptMutated);
+	                                                System.out.println(calculateSimilarity2(ecoreMM, mutatedOriginal, gptMutated));
+	                                            } catch (Exception e) {
+	                                                System.err.println("An error occurred with file: " + file);
+	                                                //e.printStackTrace();
+	                                            }
+	                                        });
+	                            } catch (IOException e) {
+	                                System.err.println("An error occurred accessing folder: " + folder);
+	                                //e.printStackTrace();
+	                            }
+	                        }
+	                    });
+	        } catch (IOException e) {
+	            System.err.println("An error occurred during initial directory walk");
+	            //e.printStackTrace();
+	        }
+	    }
+	
+	
+	
 	
 	public static Resource registerMetamodel(String ecoreMetamodel) {
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
@@ -90,5 +142,8 @@ public class Comparator {
 			return 0;
 		}
 	}
+	
+	
+
 	
 }

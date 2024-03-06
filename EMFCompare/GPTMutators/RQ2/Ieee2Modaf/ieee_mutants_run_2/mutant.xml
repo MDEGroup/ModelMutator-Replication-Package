@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns0:IEEE1471Model xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:ns0="http://ieee1471">
+  <system name="PHbHkchVEsXZVgQ" content="xAhhfBxOHdlxJwToTyLYSyn"/>
+  <system name="FVhucm" content="YDUIobiSctValJyHmOzlyFhSSd"/>
+  <system name="fJlTFvELJWPzo" content="vSfkuwuzqIiHPLMIhPhJepuLpxOLzOdMmjvzGukrWGBHMUQgSDqUPEC"/>
+  <system name="HYOlCrPpbdO" content="YiTYuEztUEblhfKKOdpkpblAGWJNKAnGhuOFHwmRPqvKUpUEBPCJGmClVbUIqcwzjqHLfwObOA"/>
+  <system name="ciYkG" content="FgFpgtXDQfHmTngGHRwgfKYMuxUFpvHbvGnCenjsREXDcT"/>
+  <mission name="XRnMmcjyZF" content="OkUkyVCTeLkMmgcoURZEtcIOCPkoYfEfEAZCbGSbOaAqtxancjYnLkeqQWzTKRjGUqDGenFebEPUZATXGNyKPLajPlp"/>
+  <mission name="IdtDYnANTHWZ" content="KThwBRNsbSQstjncIanR"/>
+  <mission name="avbSUlVROukhTXy" content="FUmrDxnlMNSSfqrpZNvIYhXNKANAHSQmcgxBvNdZMIndwjjRHoEKopelIiIxBNEuAxTnMcxZWPkzGzqoTSYneyIWMNIB"/>
+  <mission name="IofWVVz" content="szMpYslkoHsayXTRhoZcAhtVAJ"/>
+  <mission name="zixNqHvQAnfvSy" content="QYpJrEOELqNfJYDkzCbAwCEpvvaNdtuEWyMBEfHYPZvSCboaffUdjaYmqeWcXwjULzBnKwTIXxcwQyN"/>
+  <stakeholder name="zxTBQBQLSePa" content="byVkYsJCBZTSgLYAxArHnwcWBdWd"/>
+  <stakeholder name="uWiGzj" content="byYAPEBGhmMUHzjFXaWVhZHheMuDpapFQxCProKfIcZQshxUwPFHGWqBFkXRWY"/>
+  <stakeholder name="mCUWBrIpFJdgrt" content="iIdfyKtQvznMGSOzfqGvQwBNNERLPTXuSsJKAoRNuhviuAY"/>
+  <stakeholder name="tZjudNzEFLVcj" content="TYkBDrwsSTWVZyFaCWhumtabnQmVXHjKgVAfWetvZHfkvmyeUHZbbU"/>
+  <stakeholder name="PeTNO" content="OGzDDTphqVsRqIgkxzJrsKkEcAPLSEEjRqRGfCSrXHXFXDFDWobUFFuyobwzPywbOoxpeGlGUKuZWwvEdMegtCoyBGOjLzo"/>
+  <concern name="xTNHoCg" content="jZhawmUvdFvWIgoKPrEbvcVUWIKqmBBGMpBimMjKRAbpbnjMxRMPbmzwedWiDCVcZWu"/>
+  <concern name="lcayscUNdkUHVfqpuy" content="gEJhLCVuKFsBxYDtnTxIagOehLremTZzBmEmHDgoTECIpyPNBfAvTqUFYWhbLepNyYQXaTcfLJRWPReFNDNcehztYBwqPeq"/>
+  <concern name="PlhCzJAHho" content="JdEoQmYmfnYmEADHoKMdxutqMfexqtKPfHjr"/>
+  <concern name="pldSZFLcUQrmC" content="CytQjLEsxxCMbOQfFxeRLulNTGftHzDVOVGCoimNodxXfQetGuavLbWkuvvPshBUCNxzRfprAFfNgOIrV"/>
+  <concern name="wATSkw" content="xZTaVarbtjPMZpUwzvfSWpsUxiZgznQpGKaiqzFCJzwoboxpKNhemgFgepxUJpdUuGnKboPirVJ"/>
+  <architecture name="biiyxSpIAzt" content="zMIIMtWQxGLWTNkSVVsOAygzUXmqxHxzmeQKYkMBeruPjhwicMHYEdZdSJujeHeuZTkfRnMrXeUVNSShqWbjMpfltHFV"/>
+  <architecture name="kTWZCVprvdkhvsOWPU" content="dJjlcTDXloQKeddlHgXkLRfmjrpQUmNDspgWpeaNssjVuJuPJCBFlucHdfhdRZcHdhOjL"/>
+  <architecture name="MwtcTs" content="vnQXYABKcqwgLOCqrlDKWJveTsAHqeRBXMXBIHkfHeQpCERQxTPvcDGRhjwTLOzmUWikRjTGObAPNhoITuJzMNTqC"/>
+  <architecture name="gNveoTrAJ" content="DULAZFuqskBcyshwVyeohBwfGTXNrfqapWubGFTsBUXBGwJBpIpNtmThsSvPGnyJRhivYvxPAncRPFXRpAWwLGTzNJoaMxUCavUg"/>
+  <architecture name="XChJDNpzOwoQNlVprpDC" content="foiLgGWDTYORbykjMZWxQUxCUVSHhnNRLYZXtbGpzrWxMMWhP"/>
+  <viewpoint name="wenDpcwwwLbpqsApMxEV" content="pJGISawkooEGpONPJRDpCWUOWqVZRTczqnzqYsRBnnohNieYRInKlTesRtAuoeKdnwCHmxPG"/>
+  <viewpoint name="YqtxAvWkKlhwfRFTTG" content="FmHaCXTctUIsLbgDeyhHihzCyDEhuvHlQLUocPaJqLQIEJcsgHyzHuUgiRcYt"/>
+  <viewpoint name="FSqrag" content="TNUaxVxkVWBaRpfXxNpYddjgjstSBRP"/>
+  <viewpoint name="HzeThh" content="DFyvIibmayecoseqvslvDZvBeAxtvSLtUloZTxWvdVcDdJHSNbpklUfvRSPYEFkPeslo"/>
+  <viewpoint name="HYHjJWDgQlqGrTpo" content="yeQcfTqNegelArqBWdtwATBgtokcHRVnkJUMamTVroUoZLTa"/>
+</ns0:IEEE1471Model>

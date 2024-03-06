@@ -1,0 +1,11 @@
+generate 2 mutants
+in "data/out/"
+from "data/model/"
+metamodel "/ASPLEExample/data/model/Asple.ecore"
+
+with commands {
+
+		remove one Statement
+		modify one Identifier with {name = 'artificial value'}
+
+}
