@@ -41,29 +41,18 @@ metamodel "/Table/data/model/Table.ecore"
 
 with commands {
 	select_table = select one Table where{rows<>null}
-	//select_rows = select one Row where{cells<>null}
-	//select_cell = select one Cell 
-	
-//	create Table with{
-//		rows = select_rows
-//	}[5..5]	
-	
-//	gen_cell= create Cell with{
-//		content= random-string(8,14)
-//	}
-	
+
 	create Table with{
 		rows = one Row
 		}[5..5]//[5..5][20..20][50..50]
 	
 	create Cell with{
 		content= random-string(5,20)
-	}[50..50]//[5..5][100..100][250..250]
+	}[50..50]
 	
 	create Row with{
 		cells = one Cell
-	}[50..50]//[5..5][100..100][250..250]
-	
+	}[50..50]
 	
 	remove all Row where {cells = null}
 	remove all Table where {rows = null}

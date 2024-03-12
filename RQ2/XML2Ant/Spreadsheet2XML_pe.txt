@@ -280,18 +280,8 @@ Given this #ECORE metamodel  <?xml version="1.0" encoding="ISO-8859-1"?>
   <children xsi:type="abc:Text" startLine="74" name="#text" value="&#xA;"/>
 </abc:Root>
 , generate model mutants according to these #RULES generate 1 mutants
-in "data/out/"
-from "data/model/"
-metamodel "/XML2Spreadsheet/data/model/XML.ecore"
-
 with commands {
 	select_root = select one Root
-	
-//	create Root with{
-//		name = random-string(5,20),
-//		value = random-string(1,2)
-//	}[5..5]
-	
 	create Element with{
 		name = random-string(5,20),
 		value = random-string(1,2),

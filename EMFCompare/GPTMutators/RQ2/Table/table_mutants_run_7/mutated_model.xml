@@ -1,0 +1,19 @@
+<table:Table xmlns:xmi="http://www.omg.org/XMI" xmlns:table="http://table" xmi:version="2.0" xmi:id="_aCp50KelEe2fge0SEqcanw">
+  <rows xmi:id="_aCp50aelEe2fge0SEqcanw">
+    <cells xmi:id="_aCp50qelEe2fge0SEqcanw" content="name"/>
+    <cells xmi:id="_6U-IsLgOEe27ipEu4e63xA" content="surname"/>
+  </rows>
+  <rows xmi:id="_aCp506elEe2fge0SEqcanw">
+    <cells xmi:id="_aCp51KelEe2fge0SEqcanw" content="name"/>
+    <cells xmi:id="_aCp51aelEe2fge0SEqcanw" content="head"/>
+    <cells xmi:id="_SnmmILgPEe27ipEu4e63xA" content="column"/>
+    <cells xmi:id="_UjaykLgPEe27ipEu4e63xA" content="cell"/>
+  </rows>
+  <rows xmi:id="_0CgsILgOEe27ipEu4e63xA">
+    <cells xmi:id="_041QILgOEe27ipEu4e63xA" content="cell"/>
+  </rows>
+  <rows xmi:id="_RF1RYLgPEe27ipEu4e63xA">
+    <cells xmi:id="_ednx4LgPEe27ipEu4e63xA" content="contentCell"/>
+    <cells xmi:id="_gqAw8LgPEe27ipEu4e63xA" content="surname"/>
+  </rows>
+</table:Table>

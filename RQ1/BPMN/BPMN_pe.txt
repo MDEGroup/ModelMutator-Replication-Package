@@ -38,7 +38,8 @@ Given this #ECORE metamodel  <?xml version="1.0" encoding="UTF-8"?>
   <elements xsi:type="sbpmn:Sequence" xmi:id="_Hir_0BEDEeqWZpyjAqEpSw" name="eat meal" from="_FdFlQBEDEeqWZpyjAqEpSw" to="_NWi00BEDEeqWZpyjAqEpSw"/>
   <elements xsi:type="sbpmn:EndEv" xmi:id="_NWi00BEDEeqWZpyjAqEpSw" name="hunger satisfied"/>
 </sbpmn:BusinessProcess>
- , generate model mutants according to these #RULES <START RULES> generate 2 mutants
+</xml>
+ , generate model mutants according to these #RULES generate 2 mutants
 in "data/out/"
 from "data/model/"
 metamodel "/NewWodelProject/data/model/simplebpmn.ecore"

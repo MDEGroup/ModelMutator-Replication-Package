@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<ns0:IEEE1471Model xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns0="http://ieee1471">
+<IEEE1471Model xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns0="http://ieee1471">
   <System name="eSnTVKDVwKfekPSE" content="gFqqvTqevXvLowQAuzyFWoSvfNoSxhzRXdRyJko"/>
   <System name="BochJIavlxkafpqkM" content="sRscxdfxZbcboUvINgvuAodUiNSooPlFYOoJRvHngHSMLmy"/>
   <System name="vVdPFRJGqxnmncR" content="SSFKGrsjRbqtuLeqVsoEsuJdZBxVyEAXQNgWEsHJXLFHmiWnpmnLnNulCviMRLGZdDHkAagHktuPMfqKxA"/>
@@ -10,4 +10,4 @@
   <Mission name="BPWIeBrUd" content="luLphcznTwKFAiKsshBFOwjqfIqySeQnUWhLdeoxIFkBZtFkgJjoAOeQZhrgbXFtdtbHpwvXCCebttCHpdEyRzPEAh"/>
   <Mission name="cgFwQRkjLsu" content="mxUNcbsmlOETqJpoERHwpYYJDADryeYFCfyXkvtgbnfrYrFCNwnobIZTLKPDaaYUpZMQPQmMKMabrzPhvVOecef"/>
   <Mission name="CpaWHhlkTRaJCzthy" content="nHHWFIEKAeBNgPrKyomoyMKDCurhACXtLsGpaYpoUlRBpFgHRljrxIn"/>
-</ns0:IEEE1471Model>
+</IEEE1471Model>

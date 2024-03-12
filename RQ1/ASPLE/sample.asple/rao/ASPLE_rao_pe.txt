@@ -104,10 +104,8 @@ and this #SEED model  <?xml version="1.0" encoding="ASCII"?>
     </statements>
   </statements>
 </asple:Program>
+</xmi:XMI>
 , generate model mutants according to these #RULES generate 2 mutants
-in "data/out/"
-from "data/model/"
-metamodel "/ASPLEExample/data/model/Asple.ecore"
 
 with commands {
 
@@ -115,4 +113,4 @@ with commands {
 			with {operator in ['add', 'subtract', 'multiply', 'divide', 'module']}
 		modify all BinaryOperator with {operator = 'qwerty1234'}
 
-} export the generated mutants in a zip file.
+} export the generated mutants in a zip file. Use the information contained in the prompt to generate the mutants.

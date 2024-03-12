@@ -82,6 +82,7 @@ Given this #ECORE metamodel  <?xml version="1.0" encoding="UTF-8"?>
     <elements xmi:id="_Lvw8INJeEeatoq8h5wJ1lA" name="Default" type="_qurIgNJXEeatoq8h5wJ1lA"/>
   </policies>
 </SecurityPolicy:SecurityPolicy>
+</xml>
  , generate model mutants according to these #RULES <START RULES> generate 2 mutants
 in "data/out/"
 from "data/model/"
