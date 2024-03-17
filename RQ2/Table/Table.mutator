@@ -22,11 +22,11 @@ with commands {
 	
 	create Cell with{
 		content= random-string(5,20)
-	}[50..50]//[5..5][100..100][250..250]
+	}[5..5]//[5..5][100..100][250..250]
 	
 	create Row with{
 		cells = one Cell
-	}[50..50]//[5..5][100..100][250..250]
+	}[5..5]//[5..5][100..100][250..250]
 	
 	
 	remove all Row where {cells = null}

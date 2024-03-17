@@ -27,7 +27,7 @@ with commands {
 		ts = create Table with{
 			name=random-string(5,20),
 			database = db
-		}[20..20]
+		}[5..5]
 		
 		 
 		
@@ -43,7 +43,7 @@ with commands {
 			type = "varchar",
 			comment = "",
 			table = one Table
-		}[200..200]
+		}[5..5]
 		
 		
 //		create IntegerColumn with{
