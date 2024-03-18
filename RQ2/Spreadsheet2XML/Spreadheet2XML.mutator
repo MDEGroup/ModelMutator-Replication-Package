@@ -6,24 +6,24 @@ metamodel "/Spreadsheet2XML/data/model/MSOfficeExcel_SpreadsheetMLSimplified.eco
 with commands {
 	select_workbook = select one Workbook
 	
-	create Table [25..25]//[25..25]
+	create Table [5..5]//[25..25]
 	
 	create Column with{
 		//width = 100.0,
 		c_table = one Table
-	}[25..25]
+	}[5..5]
 	
 	create Row with{
 		r_cells = all Cell
-	}[25..25]
+	}[5..5]
 	
 	create Cell with{
 		c_data = all Data
-	}[25..25]
+	}[5..5]
 	
 	create Data with{
 		value = all ValueType
-	}[10..10]
+	}[5..5]
 	
 //	create ValueType [5..5]
 }

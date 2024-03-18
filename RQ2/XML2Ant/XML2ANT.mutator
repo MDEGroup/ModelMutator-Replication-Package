@@ -11,17 +11,17 @@ with commands {
 		name = random-string(5,20),
 		value = random-string(1,2),
 		parent = one Root
-	}[25..25]
+	}[5..5]
 	
 	create Text with{
 		name = random-string(5,20),
 		value = random-string(1,2),
 		parent = one Element
-	}[25..25]
+	}[5..5]
 	
 	create Attribute with{
 		name = random-string(5,20),
 		value = random-string(1,2),
 		parent = one Element
-	}[25..25]
+	}[5..5]
 }
