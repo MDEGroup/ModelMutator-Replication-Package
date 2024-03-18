@@ -1,0 +1,10 @@
+<SecurityPolicy:SecurityPolicy xmlns:SecurityPolicy="http://securityPolicy/1.0" xmlns:xmi="http://www.omg.org/XMI">
+    <policyTypes xmi:id="policyType1" name="OrBAC">
+        <ruleTypes xmi:id="ruleType1" name="Permission"/>
+        <ruleTypes xmi:id="ruleType2" name="Prohibition"/>
+        <elementTypes xmi:id="elementType1" name="Activity"/>
+        <elementTypes xmi:id="elementType2" name="Role"/>
+    </policyTypes>
+    <parameters xmi:id="param1" name="param1" type="elementType1"/>
+    <parameters xmi:id="param2" name="param2" type="elementType2"/>
+<SecurityPolicy:Rule xmi:id="newSimVarRule13" name="SimVarRule13" type="ruleType2" parameters="param1"/><SecurityPolicy:PolicyType xmi:id="newPolicyTypeSimVar13_0" name="vubckj13"/><SecurityPolicy:PolicyType xmi:id="newPolicyTypeSimVar13_1" name="mnum13"/><SecurityPolicy:PolicyType xmi:id="newPolicyTypeSimVar13_2" name="bsms13"/><SecurityPolicy:PolicyType xmi:id="newPolicyTypeSimVar13_3" name="qnfyg13"/><SecurityPolicy:PolicyType xmi:id="newPolicyTypeSimVar13_4" name="svvrad13"/></SecurityPolicy:SecurityPolicy>

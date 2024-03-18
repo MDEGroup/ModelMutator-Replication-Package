@@ -67,7 +67,7 @@ Given this #ECORE metamodel  <?xml version="1.0" encoding="UTF-8"?>
   <alphabet xmi:id="_yc1HIAQUEeepNvJoeelbpw" symbol="i2"/>
   <alphabet xmi:id="_zLI-oAQUEeepNvJoeelbpw" symbol="i3"/>
 </PFSM:PFSM>
- , generate model mutants according to these #RULES <START RULES> generate 2 mutants
+ , generate model mutants according to these #RULES generate 2 mutants
 in "data/out/"
 from "data/model/"
 metamodel "/PFSMExample/data/model/PFSM.ecore"

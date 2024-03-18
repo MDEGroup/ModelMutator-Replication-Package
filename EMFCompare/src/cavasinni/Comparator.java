@@ -46,16 +46,16 @@ public class Comparator {
 	 */
 
 	public static void main(String[] args) {
-	     String basePath = "GPTMutators/RQ1/security/";
-	        String ecoreMM = basePath + "SecurityPolicy.ecore";
-	        String mutatedOriginal = basePath + "Output1.model";
+	     String basePath = "GPTMutators/RQ1/pfsm/";
+	        String ecoreMM = basePath + "PFSM.ecore";
+	        String mutatedOriginal = basePath + "Output0.model";
 
 	        try {
 	            Files.walk(Paths.get(basePath))
 	                .filter(Files::isDirectory)
 	                .forEach(folder -> {
 	                    String folderName = folder.getFileName().toString();
-	                    if (Pattern.matches("security_mutants_run_\\d+", folderName)) {
+	                    if (Pattern.matches("pfsm_mutants_run_\\d+", folderName)) {
 	                        processFolder(folder, ecoreMM, mutatedOriginal);
 	                    }
 	                });
@@ -67,7 +67,7 @@ public class Comparator {
 
 	private static void processFolder(Path folder, String ecoreMM, String mutatedOriginal) {
 		try (Stream<Path> files = Files.walk(folder)) {
-			files.filter(file -> file.toString().endsWith(".xmi")).forEach(file -> {
+			files.filter(file -> file.toString().endsWith(".xml")).forEach(file -> {
 				try {
 					String gptMutated = file.toString();
 					System.out.println("Comparing: " + mutatedOriginal + " with " + gptMutated);
