@@ -4,21 +4,21 @@ import numpy as np
 
 def plot_d1_stats():
     # Data
-    metamodels = ['ASPLE', 'BPMN', 'PFSM', 'SecurityPolicy']
-    classes = [15, 16, 4, 7]
-    attributes = [7, 1, 6, 7]
-    relationships = [14, 3, 7, 12]
+    metamodels = ['Families', 'IEEE', 'MySQL', 'Table', 'XML']
+    classes =       [2, 14, 8, 3,5]
+    attributes =    [2, 2, 7, 1,6]
+    relationships = [8, 31, 7, 2,2]
 
     x = np.arange(len(metamodels))  # the label locations
     width = 0.2  # the width of the bars
 
     fig, ax = plt.subplots()
-    rects1 = ax.bar(x - width, classes, width, label='Classes')
-    rects2 = ax.bar(x, attributes, width, label='Attributes')
-    rects3 = ax.bar(x + width, relationships, width, label='Relationships')
-
+    # Using different shades of blue for each category
+    rects1 = ax.bar(x - width, classes, width, label='Classes', color='peachpuff')  # Light Orange
+    rects2 = ax.bar(x, attributes, width, label='Attributes', color='sandybrown')  # Medium Orange
+    rects3 = ax.bar(x + width, relationships, width, label='Relationships', color='chocolate')  # Dark Orange
     # Add some text for labels, title and custom x-axis tick labels, etc.
-    ax.set_ylabel('')
+    ax.set_ylabel('Counts')
     ax.set_title('')
     ax.set_xticks(x)
     ax.set_xticklabels(metamodels)

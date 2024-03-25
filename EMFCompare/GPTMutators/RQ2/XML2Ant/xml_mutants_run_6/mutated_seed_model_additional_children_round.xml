@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='ASCII'?>
+<abc:Root xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abc="http://abc" xmi:version="2.0" startLine="3" endLine="75" name="project">
+	<abc:Element xsi:type="abc:Element" name="ieWtChbQzEAVbknVU" value="u">
+		<abc:Text xsi:type="abc:Text" name="DvsPEB" value="xo" />
+		<abc:Attribute xsi:type="abc:Attribute" name="iJHne" value="aG" />
+		<abc:Text xsi:type="abc:Text" name="lgnkwToQfRmaFriNZwAF" value="NZ" />
+		<abc:Attribute xsi:type="abc:Attribute" name="coLUBRutUDIouv" value="b" />
+	</abc:Element>
+	<abc:Element xsi:type="abc:Element" name="RkkGfvO" value="Tx">
+		<abc:Text xsi:type="abc:Text" name="vwtHvCSu" value="cP" />
+		<abc:Attribute xsi:type="abc:Attribute" name="hxlwuxS" value="Ov" />
+		<abc:Text xsi:type="abc:Text" name="ZLlMe" value="I" />
+		<abc:Attribute xsi:type="abc:Attribute" name="vjriwfHflFGgLYx" value="xc" />
+	</abc:Element>
+	<abc:Element xsi:type="abc:Element" name="dbIwGIEhBT" value="CF">
+		<abc:Text xsi:type="abc:Text" name="xMZoywoqiANsX" value="x" />
+		<abc:Attribute xsi:type="abc:Attribute" name="TlYAaK" value="P" />
+		<abc:Text xsi:type="abc:Text" name="DFQTCtqmtgIOUHnUg" value="Hv" />
+		<abc:Attribute xsi:type="abc:Attribute" name="DzAoWZ" value="M" />
+	</abc:Element>
+</abc:Root>

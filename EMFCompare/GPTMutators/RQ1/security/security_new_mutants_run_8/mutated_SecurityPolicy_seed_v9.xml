@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SecurityPolicy:SecurityPolicy xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SecurityPolicy="http://securityPolicy/1.0" xmi:version="2.0" xsi:schemaLocation="http://securityPolicy/1.0 SecurityPolicy.ecore" xmi:id="_VcztYNJXEeatoq8h5wJ1lA">
+  <policyTypes xmi:id="_BMag" name="RBAC">
+    <ruleTypes xmi:id="_C7" name="UserRole" parameters="_JF"/>
+    <ruleTypes xmi:id="_Ed6" name="RolePermission" parameters="_KG _H4p _JF"/>
+    <elementTypes xmi:id="_G1V" name="User"/>
+    <elementTypes xmi:id="_H4" name="Permission"/>
+    <elementTypes xmi:id="_JF" name="Role" hierarchy="true"/>
+    <elementTypes xmi:id="_KG" name="Constraint"/>
+  </policyTypes>
+  <policies xmi:id="_vk" name="LibraryRBAC" type="_BMag">
+    <rules xmi:id="_lsG" name="R1" parameters="__32d _0FA" type="_C7f"/>
+    <rules xmi:id="_p1Ab" name="R2" parameters="_O69 _-R2w" type="_C7f"/>
+    <rules xmi:id="_uQ" name="R3" parameters="_8fF _MnX" type="_C7f"/>
+    <rules xmi:id="_x2X" name="R4" parameters="_3Dv _0FA _X7N" type="_Ed6"/>
+    <rules xmi:id="_1aM" name="R5" parameters="_5k _yKA _X7N" type="_Ed6"/>
+    <elements xmi:id="_yKAN" name="Personnel" type="_JF+">
+      <children xmi:id="_O6" name="Director" type="_JF"/>
+      <children xmi:id="_MnX" name="Secretary" type="_JFs"/>
+    </elements>
+    <elements xmi:id="_0F" name="Student" type="_JFs"/>
+    <elements xmi:id="_3Dv" name="BorrowBook" type="_H4"/>
+    <elements xmi:id="_5kx+" name="ModifyUserAccount" type="_H4p"/>
+    <elements xmi:id="_TAm+" name="CreateUserAccount" type="_H4p"/>
+    <elements xmi:id="_8f" name="alice" type="_G1"/>
+    <elements xmi:id="_-R2" name="yves" type="_G1V"/>
+    <elements xmi:id="__32" name="romain" type="_G1V"/>
+    <elements xmi:id="_X7" name="WorkingDays" type="_KG"/>
+    <elements xmi:id="_ZwV+" name="Holidays" type="_KG"/>
+    <elements xmi:id="_bq" name="AllTime" type="_KG"/>
+  </policies>
+<policyTypes name="class-control-rer_0"/><policyTypes name="class-control-rer_1"/><policyTypes name="class-control-rer_2"/></SecurityPolicy:SecurityPolicy>

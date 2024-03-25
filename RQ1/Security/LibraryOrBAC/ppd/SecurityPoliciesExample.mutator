@@ -9,5 +9,4 @@ with commands {
 		c = select one Parameter in closure(p->children)
 		modify r with {parameters -= p, parameters += c}
 		create PolicyType with {name="class-control-ppd"}[1..5]
-
 }

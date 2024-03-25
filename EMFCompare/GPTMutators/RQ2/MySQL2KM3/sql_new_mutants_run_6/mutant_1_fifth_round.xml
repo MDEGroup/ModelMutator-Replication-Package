@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mysql:DataBase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mysql="http://mysql" xmi:id="_uXkccFiJEe6Vh9XGMD-IQw" name="dbtest">
+  <!-- Mutant 1 Tables and Columns for Fifth Round -->
+  <tables name="RandomTable_1_Fifth">
+    <columns xsi:type="mysql:IntegerColumn" name="RandomColumn_1_Fifth" type="varchar" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+  </tables>
+</mysql:DataBase>
