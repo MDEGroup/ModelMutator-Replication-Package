@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns="Families" xmi:version="2.0">
+  <Family lastName="March">
+    <father firstName="Jim"/>
+    <mother firstName="Cindy"/>
+    <sons firstName="Brandon"/>
+    <daughters firstName="Brenda"/>
+  </Family>
+  <Family lastName="Sailor">
+    <father firstName="Peter"/>
+    <mother firstName="Jackie"/>
+    <sons firstName="David"/>
+    <sons firstName="Dylan"/>
+    <daughters firstName="Kelly"/>
+  </Family>
+  <Family lastName="jftXyISRAq">
+    <father firstName="teivo"/>
+    <mother firstName="SwpYb"/>
+    <sons firstName="VYxgm"/>
+    <daughters firstName="WkJWj"/>
+  </Family>
+</xmi:XMI>
