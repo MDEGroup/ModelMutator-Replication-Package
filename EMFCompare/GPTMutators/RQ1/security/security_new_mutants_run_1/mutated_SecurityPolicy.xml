@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SecurityPolicy xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <PolicyType name="class-control-rer_1"/>
+  <PolicyType name="class-control-rer_2"/>
+  <PolicyType name="class-control-rer_3"/>
+  <PolicyType name="class-control-rer_4"/>
+  <PolicyType name="class-control-rer_5"/>
+</SecurityPolicy>

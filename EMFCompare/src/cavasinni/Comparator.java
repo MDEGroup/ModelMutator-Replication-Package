@@ -46,8 +46,8 @@ public class Comparator {
 	 */
 
 	public static void main(String[] args) {
-	     String basePath = "GPTMutators/RQ1/pfsm/";
-	        String ecoreMM = basePath + "PFSM.ecore";
+	     String basePath = "GPTMutators/RQ2/Table/";
+	        String ecoreMM = basePath + "Table.ecore";
 	        String mutatedOriginal = basePath + "Output0.model";
 
 	        try {
@@ -55,7 +55,7 @@ public class Comparator {
 	                .filter(Files::isDirectory)
 	                .forEach(folder -> {
 	                    String folderName = folder.getFileName().toString();
-	                    if (Pattern.matches("pfsm_mutants_run_\\d+", folderName)) {
+	                    if (Pattern.matches("table_mutants_run_\\d+", folderName)) {
 	                        processFolder(folder, ecoreMM, mutatedOriginal);
 	                    }
 	                });

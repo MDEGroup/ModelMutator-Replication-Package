@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='ASCII'?>
+<abc:Root xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abc="http://abc" xmi:version="2.0" startLine="3" endLine="75" name="project">
+	<abc:Element xsi:type="abc:Element" name="CdCoVM" value="Fl">
+		<abc:Text xsi:type="abc:Text" name="AMkYFIThbg" value="Ae" />
+		<abc:Attribute xsi:type="abc:Attribute" name="ATLlfett" value="X" />
+	</abc:Element>
+</abc:Root>

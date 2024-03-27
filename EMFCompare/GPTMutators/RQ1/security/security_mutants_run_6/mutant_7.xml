@@ -4,7 +4,7 @@
 		<ruleTypes xmi:id="ruleType2" name="Prohibition" />
 		<elementTypes xmi:id="elementType1" name="Activity" />
 		<elementTypes xmi:id="elementType2" name="Role" />
-	</policyTypes>	
+	</policyTypes>
 	<SecurityPolicy:Rule xmi:id="newSlightRule6" name="SlightRule6" type="ruleType2" parameters="param1" />
 	<SecurityPolicy:PolicyType xmi:id="newPolicyTypeSlight6_0" name="class-control-anr-0" />
 	<SecurityPolicy:PolicyType xmi:id="newPolicyTypeSlight6_1" name="class-control-anr-1" />

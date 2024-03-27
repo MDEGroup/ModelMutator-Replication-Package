@@ -9,4 +9,5 @@ with commands{
 		modify t1 with {probability += random(0.0, t0.probability)}
 		t2 = select one Transition where {self <> t0 and self <> t1 and src = t0->src}
 		modify t2 with {probability -= t1.probability}
+		create PolicyType with {name="class-control-alp"}[1..5]
 }

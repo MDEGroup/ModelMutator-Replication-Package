@@ -159,17 +159,17 @@ def parse_xmi_model_and_count(mm_path, xmi_file_path):
     #tree.write(xmi_file_path, encoding='utf-8', xml_declaration=True)
 
 
-
-
-
 def xmi_stats(model_resource):
-    # Initialize counters for attributes and references
+    # Initialize counters for attributes, references, and classes
     attribute_count = 0
     reference_count = 0
+    class_count = 0
 
     # Define a recursive function to traverse the model
     def traverse(obj):
-        nonlocal attribute_count, reference_count
+        nonlocal attribute_count, reference_count, class_count
+        # Increment class count for each object traversed
+        class_count += 1
         for feature in obj.eClass.eAllStructuralFeatures():
             value = obj.eGet(feature)
             if isinstance(feature, EReference):
@@ -194,23 +194,27 @@ def xmi_stats(model_resource):
     # Start traversing from the root of the model
     for root in model_resource.contents:
         traverse(root)
-    print("model attr", attribute_count)
-    print("model ref", reference_count)
-    sum_sf = attribute_count + reference_count
-    print("tot sf: ", sum_sf)
-    return attribute_count, reference_count
 
+    print("model classes:", class_count)
+    print("model attributes:", attribute_count)
+    print("model references:", reference_count)
+
+    # Calculate the total number of structural features (attributes + references) and classes
+    total_elements = attribute_count + reference_count + class_count
+    print("total elements in model:", total_elements)
+
+    return class_count, attribute_count, reference_count
 
 if __name__ == '__main__':
-    path_rq= '../EMFCompare/GPTMutators/RQ1/'
+    path_rq= 'C:/Users/claud/OneDrive/Desktop/paperTo Submit/Repos/ModelMutator-Replication-Package/EMFCompare/GPTMutators/RQ2/'
 
 
-    mm_path = path_rq +  "Security/LibraryOrBAC/anr/SecurityPolicy.ecore"
+    mm_path = path_rq +  "XML2Ant/XML.ecore"
 
-    mm_path = "C:/Users/claud/OneDrive/Desktop/paperTo Submit/Repos/ModelMutator-Replication-Package/RQ1/Security/LibraryOrBAC/anr/SecurityPolicy.ecore"
-    xmi_path = "C:/Users/claud/OneDrive/Desktop/paperTo Submit/Repos/ModelMutator-Replication-Package/RQ1/Security/LibraryOrBAC/anr/Output0.model"
+    #mm_path = "pfsm/PFSM.ecore"
+    xmi_path = path_rq + "XML2Ant/Output0.model"
     model_resource = parse_xmi_model_and_count(mm_path, xmi_path)
-    #xmi_stats(model_resource)
+    xmi_stats(model_resource)
 
 
 

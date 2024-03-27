@@ -8,6 +8,7 @@
 	<parameters xmi:id="param1" name="param1" type="elementType1" />
 	<parameters xmi:id="param2" name="param2" type="elementType2" />
 	<rules xmi:id="newDiffRule4" name="UniqueRule4" type="ruleType2" parameters="newUniqueParam4" />
-	<parameters /> xmi:id="newUniqueParam4" name="UniqueParam4" type="elementType1" />
-	< xmi:id="newPolicyTypeDiff4_0" name="class-control-anr" />
+	<parameters />
+	xmi:id="newUniqueParam4" name="UniqueParam4" type="elementType1" />
+	<xmi:id
 </SecurityPolicy:SecurityPolicy>

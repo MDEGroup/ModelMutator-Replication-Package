@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mysql:DataBase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mysql="http://mysql" xmi:id="_uXkccFiJEe6Vh9XGMD-IQw" name="dbtest">
+  <!-- Mutant 1 Generated According to New Rules -->
+  <tables name="GeneratedTable_1">
+    <columns xsi:type="mysql:IntegerColumn" name="GeneratedColumn_1" type="varchar" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+  </tables>
+</mysql:DataBase>

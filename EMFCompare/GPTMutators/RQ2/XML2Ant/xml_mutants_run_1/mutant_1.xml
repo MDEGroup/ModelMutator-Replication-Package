@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<abc:Root xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:abc="http://abc" xsi:type="abc:Root" name="project" startLine="1" endLine="100">
+	<abc:Element xsi:type="abc:Element" name="YizWbGW" value="H">
+		<abc:Text xsi:type="abc:Text" name="cUAVwlzEDWeUfLpznl" value="S" />
+		<abc:Attribute xsi:type="abc:Attribute" name="cABQfXC" value="OP" />
+	</abc:Element>
+</abc:Root>
