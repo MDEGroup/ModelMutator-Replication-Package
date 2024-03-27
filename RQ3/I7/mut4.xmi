@@ -1,0 +1,11 @@
+<ns0:Family xmlns:ns0="http://families" xmlns:ns1="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ns1:version="2.0" xsi:schemaLocation="http://families PrimitiveTypes#/0" lastName="Doe">
+  <father firstName="John" age="48" />
+  <mother firstName="Alice" age="46" />
+  <sons firstName="James" age="13" />
+  <daughters firstName="Evelyn" age="11" />
+  <sons firstName="Charlie" age="10" />
+  <sons firstName="Henry" age="8" />
+  <sons firstName="George" age="6" />
+  <daughters firstName="Sophia" age="7" />
+  <daughters firstName="Isabella" age="5" />
+</ns0:Family>

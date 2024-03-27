@@ -1,0 +1,6 @@
+<family:Family xmlns:xmi="http://www.omg.org/XMI" xmlns:family="http://example.org/family" xmi:version="2.0">
+    <members name="Barack Obama" birthdate="1961-08-04"/>
+    <members name="Michelle Obama" birthdate="1964-01-17"/>
+    <members name="Malia Obama" birthdate="1998-07-04"/>
+    <members name="Sasha Obama" birthdate="2001-06-10"/>
+</family:Family>

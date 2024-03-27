@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Families:Family
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:Families="http://families"
+    xsi:schemaLocation="http://families PrimitiveTypes#/0"
+    lastName="Doe">
+  <father firstName="John" age="45"/>
+  <mother firstName="Alice" age="43"/>
+  <sons firstName="William" age="15"/>
+  <sons firstName="Oliver" age="13"/>
+  <sons firstName="James" age="10"/>
+  <daughters firstName="Evelyn" age="8"/>
+  <!-- New children added below -->
+  <sons firstName="Henry" age="6"/>
+  <sons firstName="Charles" age="4"/>
+  <daughters firstName="Mia" age="2"/>
+</Families:Family>

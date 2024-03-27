@@ -1,0 +1,6 @@
+<family name="Obama Family">
+  <members xsi:type="family:Person" name="Barack Obama" role="Father" age="60"/>
+  <members xsi:type="family:Person" name="Michelle Obama" role="Mother" age="58"/>
+  <members xsi:type="family:Person" name="Malia Obama" role="Daughter" age="24"/>
+  <members xsi:type="family:Person" name="Sasha Obama" role="Daughter" age="21"/>
+</family>
