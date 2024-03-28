@@ -32,19 +32,15 @@ give the following metamodel: <?xml version="1.0" encoding="ISO-8859-1"?>
     <eClassifiers xsi:type="ecore:EDataType" name="String"/>
   </ecore:EPackage>
 </xmi:XMI>
- and the following seed model:<?xml version='1.0' encoding='UTF-8'?>
-<Families:Family xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Families="http://families" xmi:version="2.0" xsi:schemaLocation="http://families PrimitiveTypes#/0" lastName="Doe">
-  <father firstName="John" age="45"/>
-  <mother firstName="Alice" age="43"/>
-  <sons firstName="James" age="10"/>
-  <daughters firstName="Evelyn" age="8"/>
-  <sons firstName="Charlie" age="7"/>
-  <sons firstName="Henry" age="5"/>
-  <sons firstName="George" age="3"/>
-  <daughters firstName="Sophia" age="4"/>
-  <daughters firstName="Isabella" age="2"/>
-<<<<<<< HEAD:RQ3/I1/pe_string.txt
-</Families:Family> change the age of the first son to 12. Generate the mutated XMI model.
-=======
-</Families:Family> add 3 years for each family memeber
->>>>>>> 5e016f2386500274dded4647d6b9908acca321c7:RQ3/I6/pe_string.txt
+ and the following seed model:<Families:Family 
+	xmlns:xmi="http://www.omg.org/XMI" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:Famiiles="http://families" 
+	xmi:version="2.0" 
+	xsi:schemaLocation="http://families Families.ecore#/0" lastName="Obama">
+    <father firstName="Valdimir"  age="71"/>
+    <mother firstName="Michelle"  age="59"/>
+    <daughters firstName="Yvanka"  age="42"/>
+    <daughters firstName="Sasha"  age="21"/>
+  </Famiiles:Family> 
+  correct this families 
