@@ -1,8 +1,0 @@
-<SecurityPolicy:SecurityPolicy xmlns:SecurityPolicy="http://securityPolicy/1.0" xmlns:xmi="http://www.omg.org/XMI">
-	<policyTypes xmi:id="policyType1" name="OrBAC">
-		<ruleTypes xmi:id="ruleType1" name="Permission" />
-		<ruleTypes xmi:id="ruleType2" name="Prohibition" />
-		<elementTypes xmi:id="elementType1" name="Activity" />
-		<elementTypes xmi:id="elementType2" name="Role" />
-	</policyTypes>
-</SecurityPolicy:SecurityPolicy>

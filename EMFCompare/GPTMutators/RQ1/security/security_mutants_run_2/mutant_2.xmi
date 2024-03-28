@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<SecurityPolicy:SecurityPolicy xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SecurityPolicy="http://securityPolicy/1.0" xmi:version="2.0" xsi:schemaLocation="http://securityPolicy/1.0 SecurityPolicy.ecore" xmi:id="_VcztYNJXEeatoq8h5wJ1lA">
-    <!-- Simplified content based on the provided seed model structure -->
-<SecurityPolicy:PolicyType xmi:id="_simulated_policy_type_5467" name="SimulatedPolicyType"/><SecurityPolicy:PolicyType xmi:id="_simulated_policy_type_2959" name="SimulatedPolicyType"/></SecurityPolicy:SecurityPolicy>

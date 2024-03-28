@@ -4,8 +4,6 @@ This project is the replication package for the ModelMutator paper to be submitt
 
 ## Project structure
 
-### EMFCompare
-This folder contains data and scripts used for comparing Electromagnetic Field (EMF) measurements or simulation outputs from different sources or models.
 
 ### GPT_KB
 The `GPT_KB` directory is designated for knowledge base files that are specifically formatted or structured for use with the custom GPT. 
