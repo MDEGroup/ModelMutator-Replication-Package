@@ -1,0 +1,12 @@
+<Families:Family
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:Families="http://families"
+    xsi:schemaLocation="http://families PrimitiveTypes#/0"
+    lastName="Obama">
+  <father firstName="Barak" age="62"/>
+  <mother firstName="Michelle" age="60"/>
+  <sons xsi:type="Families:Member" firstName="Malia" age="25"/>
+  <daughters xsi:type="Families:Member" firstName="Sasha" age="22"/>
+</Families:Family>
