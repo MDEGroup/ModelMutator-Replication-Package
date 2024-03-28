@@ -42,9 +42,15 @@ give the following metamodel: <?xml version="1.0" encoding="ISO-8859-1"?>
     lastName="Doe">
   <father firstName="John" age="45"/>
   <mother firstName="Alice" age="43"/>
-  <sons firstName="William" age="15"/>
-  <sons firstName="Oliver" age="13"/>
+  <sons firstName="William" age="18"/>
+  <sons firstName="Oliver" age="20"/>
   <sons firstName="James" age="10"/>
   <daughters firstName="Evelyn" age="8"/>
+  <sons firstName="Charlie" age="7"/>
+  <sons firstName="Henry" age="5"/>
+  <sons firstName="George" age="3"/>
+  <daughters firstName="Mia" age="19"/>
+  <daughters firstName="Sophia" age="4"/>
+  <daughters firstName="Isabella" age="2"/>
 </Families:Family>
-add 3 childrem 
+remove children older than 15 years old

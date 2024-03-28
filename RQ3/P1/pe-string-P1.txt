@@ -47,4 +47,4 @@ give the following metamodel: <?xml version="1.0" encoding="ISO-8859-1"?>
   <sons firstName="James" age="10"/>
   <daughters firstName="Evelyn" age="8"/>
 </Families:Family>
-add 3 children
+add 3 children. Export the XMI model.
