@@ -4,40 +4,16 @@ from "data/model/"
 metamodel "/mySQL/data/model/MySQL.ecore"
 
 with commands {
-		//sel_db = select one DataBase
-		
-		
-//		col = create Column with{
-//			name=random-string(5,20)
-//		}
-//		
-//		tab = create Table with{
-//			name=random-string(5,20),
-//			columns=col
-//		}
-//		
-//		create DataBase with{
-//			name="mydb",
-//			tables=tab
-//		}[2]
-		
+
 		db = select one DataBase
-		
 
 		ts = create Table with{
 			name=random-string(5,20),
 			database = db
 		}[20..20]
+
 		
-		 
-		
-//		create Column with{
-//			name=random-string(5,20),
-//			type = "varchar",
-//			comment = random-string(5,20),
-//			table = one Table
-//		}[25..25]
-		
+
 		create Column with{
 			name=random-string(5,20),
 			type = "varchar",
@@ -45,18 +21,9 @@ with commands {
 			table = one Table
 		}[200..200]
 		
-		
-//		create IntegerColumn with{
-//			name=random-string(5,20),
-//			type = "varchar",
-//			comment = random-string(5,20),
-//			table = one Table
-//		}[120..120]
 
-		//remove one DataBase where{name="dbtest"}
+
 		remove all Table where{columns=null}
-//	create DataBase with{
-//		name="db"
-//	}
+
 	
 }

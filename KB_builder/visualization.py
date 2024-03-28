@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
+import pandas as pd
+import seaborn as sns
 
 def plot_d1_stats():
     # Data
@@ -44,5 +45,41 @@ def plot_d1_stats():
     plt.savefig('d1_stats.pdf')
 
 
+
+
+def plot():
+    # Data
+
+    data = {
+        'rules': ['create'] * 4 + ['edit'] * 4 + ['remove'] * 4,
+        'Domains': ['ASPLE', 'PFSM', 'BPMN', 'SecurityPol',
+                    'Families', 'MySQL', 'IEEE1471', 'Table',
+                    'Families', 'MySQL', 'IEEE1471', 'Table'],
+        'Count': [0, 1620, 1479, 1479,
+                  3828, 2985, 1969, 1479,
+                  3828, 2985, 1969, 1479]
+    }
+
+    # Creating a DataFrame
+    df = pd.DataFrame(data)
+
+    # Assign color groups based on domain
+    color_map = {domain: 'blue' if domain in ['ASPLE', 'PFSM', 'BPMN', 'SecurityPol'] else 'green' for domain in
+                 df['Domains']}
+
+    # Plotting
+    plt.figure(figsize=(12, 8))
+    sns.barplot(x='rules', y='Count', hue='Domains', data=df, palette=color_map, dodge=True)
+
+    # Customizing the plot
+    plt.legend(title="Domains", bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.title('Bar Plot Grouped by Rules with Individual Domain Bars')
+    plt.xlabel('Rules')
+    plt.ylabel('Count')
+    plt.tight_layout()
+
+    # Display the plot
+    plt.show()
+
 if __name__ == "__main__":
-    plot_d1_stats()
+    plot()

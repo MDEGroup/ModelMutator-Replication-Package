@@ -209,10 +209,10 @@ if __name__ == '__main__':
     path_rq= 'C:/Users/claud/OneDrive/Desktop/paperTo Submit/Repos/ModelMutator-Replication-Package/EMFCompare/GPTMutators/RQ2/'
 
 
-    mm_path = path_rq +  "XML2Ant/XML.ecore"
+    mm_path = path_rq +  "MySQL2KM3/MySQL.ecore"
 
     #mm_path = "pfsm/PFSM.ecore"
-    xmi_path = path_rq + "XML2Ant/Output0.model"
+    xmi_path = path_rq + "MySQL2KM3/euro2004-MySQL.model"
     model_resource = parse_xmi_model_and_count(mm_path, xmi_path)
     xmi_stats(model_resource)
 

@@ -42,7 +42,7 @@ createMember {
 	 
 	 
 	 
-	 create Member with { firstName = random-string (8,14)} [5..5]
+	 create Member with { firstName = random-string (8,14)} [1..5]
 	 
 	 create Member with {firstName = random-string(8,14),familyDaughter = gen_daugther}[5..5]
 	 create Member with {firstName = random-string(8,14),familyMother= gen_mother}[5..5]
