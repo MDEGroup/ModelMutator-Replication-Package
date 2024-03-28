@@ -5,8 +5,8 @@
     xmi:version="2.0" 
     xsi:schemaLocation="http://families Families.ecore" 
     lastName="Obama">
-    <father firstName="Barack" age="71"/>
-    <mother firstName="Michelle" age="59"/>
-    <sons firstName="Malia" age="42"/>
-    <daughters firstName="Sasha" age="21"/>
+    <father firstName="Barack" age="62"/>
+    <mother firstName="Michelle" age="60"/>
+    <sons firstName="Malia" age="25"/>
+    <daughters firstName="Sasha" age="22"/>
 </Families:Family>
