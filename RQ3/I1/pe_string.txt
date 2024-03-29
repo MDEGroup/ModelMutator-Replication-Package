@@ -43,4 +43,4 @@ give the following metamodel: <?xml version="1.0" encoding="ISO-8859-1"?>
   <sons firstName="George" age="3"/>
   <daughters firstName="Sophia" age="4"/>
   <daughters firstName="Isabella" age="2"/>
-</Families:Family> change the age of the first son to 12. Generate the mutated XMI model.
+</Families:Family> Add three years to the older children. 
