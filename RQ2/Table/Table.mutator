@@ -27,9 +27,6 @@ with commands {
 	create Row with{
 		cells = one Cell
 	}[5..5]//[5..5][100..100][250..250]
-	
-	
-	remove all Row where {cells = null}
-	remove all Table where {rows = null}
+
 	
 }
