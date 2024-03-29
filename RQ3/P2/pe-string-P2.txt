@@ -53,4 +53,4 @@ give the following metamodel: <?xml version="1.0" encoding="ISO-8859-1"?>
   <daughters firstName="Sophia" age="4"/>
   <daughters firstName="Isabella" age="2"/>
 </Families:Family>
-remove children older than 15 years old
+remove children older than 15 years old. Export the XMI file.
