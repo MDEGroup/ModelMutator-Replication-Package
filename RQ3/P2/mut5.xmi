@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<?xml version='1.0' encoding='UTF-8'?>
+>>>>>>> d89aa2ae2a0c4da433b76b4f8ddc350939934ba5
 <Families:Family xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Families="http://families" xmi:version="2.0" xsi:schemaLocation="http://families PrimitiveTypes#/0" lastName="Doe">
   <father firstName="John" age="45"/>
   <mother firstName="Alice" age="43"/>

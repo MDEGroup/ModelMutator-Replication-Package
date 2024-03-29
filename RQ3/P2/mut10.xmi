@@ -8,4 +8,8 @@
   <sons firstName="George" age="3"/>
   <daughters firstName="Sophia" age="4"/>
   <daughters firstName="Isabella" age="2"/>
+<<<<<<< HEAD
 </Families:Family>
+=======
+</Families:Family>
+>>>>>>> d89aa2ae2a0c4da433b76b4f8ddc350939934ba5
