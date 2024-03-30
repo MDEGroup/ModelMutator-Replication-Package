@@ -5,7 +5,9 @@ domain-aware model mutations* submitted to MODELS2024.
 
 ## Setting up
 
-Unfortunately, the OpenAI’s policy prevents us from publishing MuTaGENe in the GPT store anonymously. We will make MuTaGENe available in case of acceptance. However, this repository provides all the materials available in the knowledge and the instruction set provided in the corresponding `Instruction.md` file. It is worth mentioning that repeating the same instruction set can lead to different results/outcomes due to the generative nature of the GPTBuilder tool. Nevertheless, we report the entire conversation used in the file. 
+Unfortunately, the OpenAI’s policy prevents us from publishing MuTaGENe in the GPT store anonymously. We will make MuTaGENe available in case of acceptance. However, this repository provides all the materials available in the knowledge and the instruction set provided in the corresponding `Instruction.md` file. 
+
+**It is worth mentioning that repeating the same instruction set can lead to different results/outcomes due to the generative nature of the GPTBuilder tool. Nevertheless, we report the entire conversation used in the instruction file.** 
 
 
 ## Project structure
@@ -37,6 +39,11 @@ helping MuTaGENe during the reasoning phase.
 functions that exploits the PyEcore library to parse the
 modeling artifacts, i.e., the metamodel and the seed model
 expressed in .ecore and .xmi format, respectively
+
+
+### SupportingScripts
+
+This folder contains the supporting Python scripts, including functions to clean the Wodel project used in the knowledge creation phase, functions employed to produce statistics.
 
 ### RQ1
 This folder contains all the materials used to answer the first research question (RQ1) outlined in our project. For each project, we include the output of the Wodel program, the generated files by MuTaGENe, the metamodel and the corresponding seed model. 
