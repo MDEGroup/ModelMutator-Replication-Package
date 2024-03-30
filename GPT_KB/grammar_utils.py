@@ -42,7 +42,7 @@ def parse_mutator_file(grammar_file_path, input_file_path):
     return content, removed_keywords
 
 
-def prompt_generator(metamodel_file, model_file, mutator_file):
+def prompt_generator(project,metamodel_file, model_file, mutator_file):
     with open(metamodel_file, 'r', encoding='utf-8') as mm:
         metamodel_content = mm.read()
 
@@ -52,5 +52,8 @@ def prompt_generator(metamodel_file, model_file, mutator_file):
     with open(mutator_file, 'r', encoding='utf-8') as mu:
         rules = mu.read()
 
-    return f"Given this #ECORE metamodel  {metamodel_content} and this #SEED model {model_content}, generate model" \
-           f" mutants according to these #RULES {rules}"
+    pe_string = f"Given this #ECORE metamodel  {metamodel_content}  and this #SEED model   {model_content} , generate model" \
+           f" mutants according to these #RULES <START RULES> {rules}  export the generated mutants in a zip file. Use the content of the prompt to generate the file"
+    with open(f"{project}_pe.txt", 'w', encoding='utf-8', errors='ignore') as out_file:
+        out_file.write(pe_string )
+    return pe_string

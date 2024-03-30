@@ -2,7 +2,7 @@ import os, re
 import zipfile
 from pathlib import Path
 import shutil
-from grammar_utils import parse_mutator_file, prompt_generator
+from GPT_KB.grammar_utils import parse_mutator_file, prompt_generator
 
 ROOT_WODEL= 'Wodel_sample/'
 ROOT = "C:/Users/claud/OneDrive/Desktop/GPT_KB/Project_samples/"
@@ -139,18 +139,12 @@ def count_folders_and_file_types(root_path):
     print(tot_mut, tot_model)
 
 
-
-
-#extract_keywords_from_xtext_file('GPT_KB/Wodel.xtext')
-#content, keywords = parse_mutator_file('GPT_KB/Wodel.xtext', 'GPT_KB/ASPLE.zip_extracted/ia1/ia1.mutator')
-#print(keywords)
-
 root_project = ROOT + 'DFASamples.zip_extracted/'
 MM_SRC = root_project +"SecurityPolicy.ecore"
 MD_SRC = root_project + "LibraryRBAC.model"
 MU_SRC = root_project + "SecurityPoliciesExample.mutator"
 
-#print(prompt_generator(root_project +'Security_rtt',MM_SRC, MD_SRC, MU_SRC))
+print(prompt_generator(root_project +'Security_rtt',MM_SRC, MD_SRC, MU_SRC))
 
 count_folders_and_file_types(root_project)
 

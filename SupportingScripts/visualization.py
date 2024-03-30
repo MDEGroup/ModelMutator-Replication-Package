@@ -11,14 +11,19 @@ def plot_d1_stats(figsize=(4, 4)):
     edit = [0, 0, 0, 0]
     remove = [0, 0, 0, 0]
 
+    # domains = ['ASPLE', 'PFSM', 'BPMN', 'SecurityPol']
+    # create =  [0, 1, 1, 1]
+    # edit = [2, 2, 4, 0]
+    # remove = [0, 0, 0, 1]
+
     x = np.arange(len(domains))  # the label locations
     width = 0.2  # the width of the bars
 
     fig, ax = plt.subplots(figsize=figsize)
     # Using different shades of blue for each category
-    rects1 = ax.bar(x - width, create, width, label='Create', color='darkred')  # Light Orange
-    rects2 = ax.bar(x, edit, width, label='Edit', color='sandybrown')  # Medium Orange
-    rects3 = ax.bar(x + width, remove, width, label='Remove', color='chocolate')  # Dark Orange
+    rects1 = ax.bar(x - width, create, width, label='create', color='darkred')  # Light Orange
+    rects2 = ax.bar(x, edit, width, label='modify', color='sandybrown')  # Medium Orange
+    rects3 = ax.bar(x + width, remove, width, label='remove', color='chocolate')  # Dark Orange
     # Add some text for labels, title and custom x-axis tick labels, etc.
     ax.set_ylabel('Counts')
     ax.set_title('')

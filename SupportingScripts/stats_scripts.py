@@ -206,7 +206,7 @@ def xmi_stats(model_resource):
     return class_count, attribute_count, reference_count
 
 if __name__ == '__main__':
-    path_rq= 'C:/Users/claud/OneDrive/Desktop/paperTo Submit/Repos/ModelMutator-Replication-Package/EMFCompare/GPTMutators/RQ2/'
+    path_rq= ''
 
 
     mm_path = path_rq +  "MySQL2KM3/MySQL.ecore"
