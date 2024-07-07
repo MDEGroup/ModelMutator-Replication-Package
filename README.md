@@ -1,11 +1,11 @@
 # MuTaGENe-Replication-Package
 
-This project is the replication package for the paper entitled *Experimenting with MuTaGENe: a custom GPT model to create
-domain-aware model mutations* submitted to MODELS2024. 
+This project is the replication package for the paper entitled *On the use of LLMs to support the development of
+domain-specific modeling languages* submitted to MDE4Intelligence workshop.
 
 ## Setting up
 
-Unfortunately, the OpenAI’s policy prevents us from publishing MuTaGENe in the GPT store anonymously. We will make MuTaGENe available in case of acceptance. However, this repository provides all the materials available in the knowledge and the instruction set provided in the corresponding `Instruction.md` file. 
+To set up the custom GPT, users can follow the reported conversation exploiting the GPT builder services offered by OpenAI. In addition, the developed GPT, namely MuTaGENe, is publicly available {here}[https://chatgpt.com/g/g-7GQpuc3wx-mutagene]. 
 
 **It is worth mentioning that repeating the same instruction set can lead to different results/outcomes due to the generative nature of the GPTBuilder tool. Nevertheless, we report the entire conversation used in the instruction file.** 
 
@@ -43,18 +43,9 @@ expressed in .ecore and .xmi format, respectively
 
 ### SupportingScripts
 
-This folder contains the supporting Python scripts, including functions to clean the Wodel project used in the knowledge creation phase, functions employed to produce statistics.
-
-### RQ1
-This folder contains all the materials used to answer the first research question (RQ1) outlined in our project. For each project, we include the output of the Wodel program, the generated files by MuTaGENe, the metamodel and the corresponding seed model. 
-
-### RQ2
-Similar to the `RQ1`, this folder contains the data used to answer the second research question (RQ2). We adopt the same structure as described for `RQ1` folder. 
+This folder contains the supporting Python scripts, including functions to clean the Wodel project used in the knowledge creation phase and functions employed to produce statistics.
 
 
-
-### RQ3
-This folder holds the data to replicate the experiment discussed in the third research question (RQ3). In particular, each subfolder represents a *mutation scenario* described in the paper. Each subfolder contains the seed model, the generated mutants, and the `pe-string.txt` file that contains the query prompt. 
 
 
 
