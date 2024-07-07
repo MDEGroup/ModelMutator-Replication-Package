@@ -5,7 +5,7 @@ domain-specific modeling languages* submitted to MDE4Intelligence workshop.
 
 ## Setting up
 
-To set up the custom GPT, users can follow the reported conversation exploiting the GPT builder services offered by OpenAI. In addition, the developed GPT, namely MuTaGENe, is publicly available {here}[https://chatgpt.com/g/g-7GQpuc3wx-mutagene]. 
+To set up the custom GPT, users can follow the reported conversation exploiting the GPT builder services offered by OpenAI. In addition, the developed GPT, namely MuTaGENe, is publicly available [here](https://chatgpt.com/g/g-7GQpuc3wx-mutagene). 
 
 **It is worth mentioning that repeating the same instruction set can lead to different results/outcomes due to the generative nature of the GPTBuilder tool. Nevertheless, we report the entire conversation used in the instruction file.** 
 
@@ -23,7 +23,7 @@ The `GPT_KB` directory is designated for knowledge base files that are specifica
 
 - Sample projects: They are loaded in the KB as .zip files and cover three different application domains, i.e., generic UML models (UMLDiagrams.zip), business process (BPEL.zip), and finite automata (DFAsample.zip). We elicit those projects since they include a larger number of examples. We used the remaining ones as testing while we excluded WodelEdu and LogicCircuits projects since the structure is different compared to standard Wodel projects 
  
-- Github parsed documentation: For each project (including the testing ones) we devise a set of scripts (see `parse_documentation.py`) to parse the documentation available on the corresponding {GitHub website} [https://gomezabajo.github.io/Wodel/samples.html]
+- Github parsed documentation: For each project (including the testing ones) we devise a set of scripts (see `parse_documentation.py`) to parse the documentation available on the corresponding [GitHub website] (https://gomezabajo.github.io/Wodel/samples.html)
 
 
 
